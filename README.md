@@ -79,6 +79,4 @@ dependencies {
     testRuntimeOnly "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 }
 ```
-
-### Plugin
-You may also need Intellij or Android Studio [plugin](https://plugins.jetbrains.com/plugin/10915-spek-framework)
+> For Spek you may also need additional Intellij or Android Studio [plugin](https://plugins.jetbrains.com/plugin/10915-spek-framework)
