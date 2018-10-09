@@ -8,6 +8,7 @@
 `DistanceConverter` - converts meters to kilometers in parameterized tests
 
 ## Junit4
+[https://junit.org/junit4/](https://junit.org/junit4/)
 ### Attach to project
 ```groovy
 dependencies{
@@ -16,6 +17,7 @@ dependencies{
 ```
 
 ## Junit5
+[https://junit.org/junit5/](https://junit.org/junit5/)
 ### Attach to project
 ```groovy
 dependencies {
@@ -33,6 +35,7 @@ test {
 ```
 
 ## KotlinTest
+[https://github.com/kotlintest/kotlintest](https://github.com/kotlintest/kotlintest)
 ### Attach to project
 ```groovy
 dependencies{
@@ -41,6 +44,7 @@ dependencies{
 ```
 
 ## Spek
+[https://spekframework.org](https://spekframework.org)
 **version 2.x**
 ### Attach to project
 ```groovy
