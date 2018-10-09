@@ -1,6 +1,6 @@
 # Kotlin Testing Examples
 
-> All sample projects should work fine under Gradle 4.8 and Intellij IDEA 2018.2.4
+> All sample projects was verified under Gradle 4.8 and Intellij IDEA 2018.2.4
 
 ## Application
 `UseCase` which provides empty string - to showcase structure of test methods
