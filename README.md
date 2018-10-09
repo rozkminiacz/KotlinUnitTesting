@@ -1,5 +1,7 @@
 # Kotlin Testing Examples
 
+This repository contains examples of basic unit tests written in Kotlin. In specific directories you can find gradle buildscript with needed dependencies and configuration, simple unit test and parameterized test. 
+
 > All sample projects was verified under Gradle 4.8 and Intellij IDEA 2018.2.4
 
 ## Application
