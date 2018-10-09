@@ -63,7 +63,6 @@ test {
 }
 
 dependencies {
-    implementation project(':application')
     testImplementation ('org.spekframework.spek2:spek-dsl-jvm:2.0.0-alpha.1')  {
         exclude group: 'org.jetbrains.kotlin'
     }
