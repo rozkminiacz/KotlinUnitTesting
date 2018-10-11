@@ -10,15 +10,11 @@ dependencies {
     testCompile(Libs.kotlintest_runner_junit5)
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-}
 
 
 //test {
 //    useJUnitPlatform()
 //}
 tasks.withType<Test>().configureEach {
-    this.useJUnitPlatform()
+    useJUnitPlatform()
 }

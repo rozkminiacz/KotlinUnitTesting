@@ -11,6 +11,7 @@ buildscript {
 
 plugins {
     id("jmfayard.github.io.gradle-kotlin-dsl-libs") version "0.2.3"
+    java
 }
 
 group = "me.rozkmin.testing"
@@ -26,5 +27,13 @@ allprojects {
     tasks.withType<KotlinCompile>().configureEach {
         kotlinOptions.jvmTarget = "1.8"
     }
+
+    apply(plugin = "java")
+    java {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+
 }
 

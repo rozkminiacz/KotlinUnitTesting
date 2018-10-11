@@ -7,10 +7,10 @@ version = "1.0-SNAPSHOT"
 
 dependencies {
     implementation(project(":application"))
-    testImplementation (Libs.spek_dsl_jvm)  {
+    testImplementation(Libs.spek_dsl_jvm)  {
         exclude("org.jetbrains.kotlin")
     }
-    testRuntimeOnly (Libs.spek_runner_junit5) {
+    testRuntimeOnly(Libs.spek_runner_junit5) {
         exclude("org.junit.platform")
         exclude("org.jetbrains.kotlin")
     }
@@ -20,11 +20,6 @@ dependencies {
 
     // spek requires kotlin-reflect, can be omitted if already in the classpath
     testRuntimeOnly(Libs.kotlin_reflect)
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 repositories {
