@@ -1,25 +1,29 @@
 package me.rozkmin.testing.kotlintest
 
-import io.kotlintest.data.forall
+import io.kotlintest.forAll
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
-import io.kotlintest.tables.row
 import me.rozkmin.testing.application.DistanceConverter
 import me.rozkmin.testing.application.Kilometer
 import me.rozkmin.testing.application.Meter
 
+
 class DistanceConverterParameterizedTest : StringSpec({
+  val converter = DistanceConverter()
 
-    val distanceConverter = DistanceConverter()
+  fun Meter.toKilometer(): Kilometer =
+    converter.parse(this)
 
-    "check distance parse"{
-        forall(
-                row(Input(500, 0.5)),
-                row(Input(750, 0.8))
-        ) {
-            distanceConverter.parse(it.parameter) shouldBe it.expected
-        }
+  "Convert meter to kilometer" {
+    val testCases = listOf(
+      500L to 0.5,
+      750L to 0.8
+    )
+
+    forAll(testCases) { (meter, kilometer) ->
+      meter.toKilometer() shouldBe kilometer
     }
-})
+  }
 
-data class Input(val parameter: Meter, val expected: Kilometer)
+
+})
