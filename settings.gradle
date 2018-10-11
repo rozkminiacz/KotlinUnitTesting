@@ -2,5 +2,7 @@ include 'junit4'
 include 'junit5'
 include 'kotlintest'
 include 'spek'
+include 'mockito'
+include 'mockk'
 include 'application'
 
