@@ -13,8 +13,8 @@ repositories {
 dependencies {
     implementation project(":application")
     testCompile(Libs.junit_jupiter_api)
-    testCompile(Libs.junit_jupiter_engine)
-    testRuntime(Libs.junit_jupiter_params)
+    testCompile(Libs.junit_jupiter_params)
+    testRuntime(Libs.junit_jupiter_engine)
 }
 
 test {
