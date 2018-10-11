@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 buildscript {
     repositories {
         mavenCentral()
@@ -13,3 +15,16 @@ plugins {
 
 group = "me.rozkmin.testing"
 version = "1.0-SNAPSHOT"
+
+allprojects {
+
+
+    repositories {
+        mavenCentral()
+    }
+
+    tasks.withType<KotlinCompile>().configureEach {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+}
+
