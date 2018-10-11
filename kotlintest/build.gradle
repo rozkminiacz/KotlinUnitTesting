@@ -16,7 +16,7 @@ test {
 
 dependencies {
     implementation project(':application')
-    testCompile 'io.kotlintest:kotlintest-runner-junit5:3.1.7'
+    testCompile Libs.kotlintest_runner_junit5
 }
 
 compileKotlin {

@@ -12,9 +12,9 @@ repositories {
 
 dependencies {
     implementation project(':application')
-    testCompile('org.junit.jupiter:junit-jupiter-api:5.3.1')
-    testCompile('org.junit.jupiter:junit-jupiter-params:5.3.1')
-    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.3.1')
+    testCompile(Libs.junit_jupiter_api)
+    testCompile(Libs.junit_jupiter_engine)
+    testRuntime(Libs.junit_jupiter_params)
 }
 
 test {
