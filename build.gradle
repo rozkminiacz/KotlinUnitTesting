@@ -2,7 +2,7 @@ group 'me.rozkmin.testing'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.2.61'
+    ext.kotlin_version = '1.2.71'
 
     repositories {
         mavenCentral()
