@@ -1,6 +1,6 @@
-include 'junit4'
-include 'junit5'
-include 'kotlintest'
-include 'spek'
-include 'application'
+include "junit4"
+include "junit5"
+include "kotlintest"
+include "spek"
+include "application"
 
