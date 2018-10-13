@@ -84,7 +84,23 @@ dependencies {
 
 ## Mockito
 [https://site.mockito.org](https://site.mockito.org)
->used with mockito-kotlin
+
+### Attach to project
+```groovy
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+
+dependencies {
+    testCompile "org.mockito:mockito-core:2.23.0"
+    
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+```
+
+## Mockito-Kotlin
 [https://github.com/nhaarman/mockito-kotlin](https://github.com/nhaarman/mockito-kotlin)
 
 ### Attach to project

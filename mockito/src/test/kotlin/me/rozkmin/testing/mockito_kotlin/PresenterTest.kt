@@ -1,17 +1,23 @@
-package me.rozkmin.testing.mockito
+package me.rozkmin.testing.mockito_kotlin
 
-import com.nhaarman.mockitokotlin2.doReturn
-import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.verify
 import me.rozkmin.testing.application.DataProvider
 import me.rozkmin.testing.application.Element
 import me.rozkmin.testing.application.Presenter
 import me.rozkmin.testing.application.View
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.mockito.Mock
+import org.mockito.Mockito.*
+import org.mockito.junit.MockitoJUnitRunner
 
+@RunWith(MockitoJUnitRunner::class)
 class PresenterTest {
 
-    val view: View = mock()
+    @Mock
+    lateinit var view: View
+
+    @Mock
+    lateinit var dataProvider: DataProvider
 
     @Test
     fun `given data exists when start presenter then display elements on view`() {
@@ -20,9 +26,7 @@ class PresenterTest {
                 Element(2, "second")
         )
 
-        val dataProvider: DataProvider = mock {
-            on { getAll() } doReturn elements
-        }
+        `when`(dataProvider.getAll()).thenReturn(elements)
 
         val presenter = Presenter(view, dataProvider)
 
@@ -34,9 +38,8 @@ class PresenterTest {
 
     @Test
     fun `given data load fail when start presenter then display error on view`() {
-        val dataProvider: DataProvider = mock {
-            on { getAll() } doReturn emptyList<Element>()
-        }
+
+        `when`(dataProvider.getAll()).thenReturn(emptyList())
 
         val presenter = Presenter(view, dataProvider)
 
@@ -49,9 +52,7 @@ class PresenterTest {
     fun `given element with id=1 exists when get one then display elements`() {
         val givenElement = Element(1, "first")
 
-        val dataProvider: DataProvider = mock {
-            on { getOne(1) } doReturn givenElement
-        }
+        `when`(dataProvider.getOne(1)).thenReturn(givenElement)
 
         val presenter = Presenter(view, dataProvider)
 
@@ -65,9 +66,7 @@ class PresenterTest {
 
         val givenElement: Element? = null
 
-        val dataProvider: DataProvider = mock {
-            on { getOne(3) } doReturn givenElement
-        }
+        `when`(dataProvider.getOne(3)).thenReturn(givenElement)
 
         val presenter = Presenter(view, dataProvider)
 
