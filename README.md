@@ -129,3 +129,13 @@ dependencies {
     testImplementation "io.mockk:mockk:1.8.9"
 }
 ```
+
+
+## Strikt
+[https://strikt.io](https://strikt.io)
+### Attach to project
+```groovy
+dependencies {
+    testImplementation("io.strikt:strikt-core:0.16.0")
+}
+```
