@@ -30,9 +30,19 @@ object Libs {
             "org.junit.jupiter:junit-jupiter-params:" + Versions.junit_jupiter_params
 
     /**
+     * [kotlin-gradle-plugin website](https://kotlinlang.org/) */
+    const val kotlin_gradle_plugin: String =
+            "org.jetbrains.kotlin:kotlin-gradle-plugin:" + Versions.kotlin_gradle_plugin
+
+    /**
      * [kotlin-reflect website](https://kotlinlang.org/) */
     const val kotlin_reflect: String =
             "org.jetbrains.kotlin:kotlin-reflect:" + Versions.kotlin_reflect
+
+    /**
+     * [kotlin-sam-with-receiver website](https://kotlinlang.org/) */
+    const val kotlin_sam_with_receiver: String =
+            "org.jetbrains.kotlin:kotlin-sam-with-receiver:" + Versions.kotlin_sam_with_receiver
 
     /**
      * [kotlin-scripting-compiler-embeddable website](https://kotlinlang.org/) */
@@ -40,19 +50,30 @@ object Libs {
             "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:" + Versions.kotlin_scripting_compiler_embeddable
 
     /**
+     * [kotlin-stdlib-jdk8 website](https://kotlinlang.org/) */
+    const val kotlin_stdlib_jdk8: String =
+            "org.jetbrains.kotlin:kotlin-stdlib-jdk8:" + Versions.kotlin_stdlib_jdk8
+
+    /**
      * [kotlintest-runner-junit5 website](http://www.github.com/kotlintest/kotlintest) */
     const val kotlintest_runner_junit5: String =
             "io.kotlintest:kotlintest-runner-junit5:" + Versions.kotlintest_runner_junit5
 
     /**
-     * [kotlin-gradle-plugin website](https://kotlinlang.org/) */
-    const val org_jetbrains_kotlin_kotlin_gradle_plugin: String =
-            "org.jetbrains.kotlin:kotlin-gradle-plugin:" + Versions.org_jetbrains_kotlin_kotlin_gradle_plugin
+     * [mockito-core website](https://github.com/mockito/mockito) */
+    const val mockito_core: String = "org.mockito:mockito-core:" + Versions.mockito_core
 
     /**
-     * [kotlin-stdlib-jdk8 website](https://kotlinlang.org/) */
-    const val org_jetbrains_kotlin_kotlin_stdlib_jdk8: String =
-            "org.jetbrains.kotlin:kotlin-stdlib-jdk8:" + Versions.org_jetbrains_kotlin_kotlin_stdlib_jdk8
+     * [mockito-kotlin website](https://github.com/nhaarman/mockito-kotlin) */
+    const val mockito_kotlin: String =
+            "com.nhaarman.mockitokotlin2:mockito-kotlin:" + Versions.mockito_kotlin
+
+    /**
+     * [mockk website](http://mockk.io) */
+    const val mockk: String = "io.mockk:mockk:" + Versions.mockk
+
+    const val org_gradle_kotlin_kotlin_dsl_gradle_plugin: String =
+            "org.gradle.kotlin.kotlin-dsl:org.gradle.kotlin.kotlin-dsl.gradle.plugin:" + Versions.org_gradle_kotlin_kotlin_dsl_gradle_plugin
 
     /**
      * [spek-dsl-jvm website](https://spekframework.github.io/spek) */
@@ -62,4 +83,6 @@ object Libs {
      * [spek-runner-junit5 website](https://spekframework.github.io/spek) */
     const val spek_runner_junit5: String =
             "org.spekframework.spek2:spek-runner-junit5:" + Versions.spek_runner_junit5
+
+    const val strikt_core: String = "io.strikt:strikt-core:" + Versions.strikt_core
 }
