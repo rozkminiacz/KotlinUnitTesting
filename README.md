@@ -11,6 +11,18 @@ This repository contains examples of basic unit tests written in Kotlin. In spec
 
 `MVP` - Model-View-Presenter contract
 
+
+
+# Gradle, Kotlin & Groovy
+
+This Gradle project is by default configured with [Gradle's Kotlin DSL](https://github.com/gradle/kotlin-dsl)
+
+The equivalent Groovy build are still available for you copy&pasting pleasures, they have been renamed as `build.gradle.groovy`
+
+You can switch between Groovy and Kotlin by running the script `$ ./toggle-kotlin-groovy.sh`
+
+ 
+
 ## Junit4
 [https://junit.org/junit4/](https://junit.org/junit4/)
 ### Attach to project
