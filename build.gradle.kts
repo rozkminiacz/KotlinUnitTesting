@@ -28,3 +28,28 @@ allprojects {
 
 }
 
+tasks.register("updateReadme") {
+    description = "Update README.adoc with the versions number"
+    group = "Custom"
+
+    val README_VARIABLES = mapOf(
+        "junit" to Versions.junit,
+        "jupiter" to Versions.org_junit_jupiter,
+        "kotlintest" to Versions.kotlintest_runner_junit5,
+        "mockk" to Versions.mockk,
+        "spek" to Versions.org_spekframework_spek2,
+        "mockito" to Versions.mockito_core,
+        "strikt" to Versions.strikt_core,
+        "mockito_kotlin" to Versions.mockito_kotlin
+    )
+
+    doLast {
+        println("== Copy-paste the content above in the top of README.adoc")
+        println()
+        println(":gradle: ${Versions.Gradle.currentVersion}")
+        for ((variable, value) in README_VARIABLES) {
+            println(":$variable: $value")
+        }
+
+    }
+}
