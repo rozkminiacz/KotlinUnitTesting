@@ -13,7 +13,7 @@ dependencies {
 }
 
 // GROOVY: test { ... }
-tasks.withType<Test>().configureEach {
+tasks.withType<Test> {
     useJUnitPlatform()
     testLogging {
         // GROOVY:

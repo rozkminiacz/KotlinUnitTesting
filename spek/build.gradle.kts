@@ -21,13 +21,11 @@ dependencies {
 }
 
 repositories {
-    maven {
-        setUrl("https://dl.bintray.com/spekframework/spek-dev")
-    }
+    maven("https://dl.bintray.com/spekframework/spek-dev")
 }
 
 
-tasks.withType<Test>().configureEach {
+tasks.withType<Test> {
     this.useJUnitPlatform {
         includeEngines("spek2")
     }
