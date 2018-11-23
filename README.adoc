@@ -1,0 +1,218 @@
+:gradle: 4.10.2
+:junit: 4.12
+:jupiter: 5.3.1
+:kotlintest: 3.1.10
+:mockk: 1.8.12
+:spek: 2.0.0-rc.1
+:mockito: 2.23.0
+:strikt: 0.17.0
+:mockito_kotlin: 2.0.0-RC1
+
+
+
+:toc:
+
+= Kotlin Unit Testing Examples
+ <https://github.com/rozkminiacz/KotlinUnitTesting>
+v1.0, 2018-27-07
+:imagesdir: assets/images
+:homepage: http://asciidoctor.org
+
+This repository contains examples of basic unit tests written in Kotlin.
+In specific directories you can find gradle buildscript with needed
+dependencies and configuration, simple unit test and parameterized test.
+
+____________________________________________________________________________
+All sample projects was verified under Gradle {gradle} and Intellij IDEA
+2018.2.4
+____________________________________________________________________________
+
+
+
+
+
+== Application
+
+`UseCase` which provides empty string - to showcase structure of test
+methods
+
+`DistanceConverter` - converts meters to kilometers in parameterized
+tests
+
+`MVP` - Model-View-Presenter contract
+
+== Gradle, Kotlin & Groovy
+
+This Gradle project is by default configured with
+https://github.com/gradle/kotlin-dsl[Gradle's Kotlin DSL]
+
+The equivalent Groovy build are still available for you copy&pasting
+pleasures, they have been renamed as `build.gradle.groovy`
+
+You can switch between Groovy and Kotlin by running the script
+`$ ./toggle-kotlin-groovy.sh`
+
+== Junit4
+
+https://junit.org/junit4/
+
+**Attach to project**
+
+[source,groovy,subs="attributes+"]
+----
+dependencies{
+    testCompile group: 'junit', name: 'junit', version: '{junit}'
+}
+----
+
+== Junit5
+
+https://junit.org/junit5/
+
+**Attach to project**
+
+[source,groovy,subs="attributes+"]
+----
+dependencies {
+    testCompile('org.junit.jupiter:junit-jupiter-api:{jupiter}')
+    testCompile('org.junit.jupiter:junit-jupiter-params:{jupiter}')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:{jupiter}')
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+----
+
+== KotlinTest
+
+https://github.com/kotlintest/kotlintest
+
+**Attach to project**
+
+[source,groovy,subs="attributes+"]
+----
+dependencies{
+    testCompile 'io.kotlintest:kotlintest-runner-junit5:{kotlintest}'
+}
+----
+
+
+== Spek
+
+https://spekframework.org *version 2.x*
+
+**Attach to project**
+
+[source,groovy,subs="attributes+"]
+----
+repositories {
+    mavenCentral()
+    maven { url "https://dl.bintray.com/spekframework/spek-dev" }
+
+}
+
+test {
+    useJUnitPlatform {
+        includeEngines 'spek2'
+    }
+}
+
+dependencies {
+    testImplementation ('org.spekframework.spek2:spek-dsl-jvm:{spek}')  {
+        exclude group: 'org.jetbrains.kotlin'
+    }
+    testRuntimeOnly ('org.spekframework.spek2:spek-runner-junit5:{spek}') {
+        exclude group: 'org.junit.platform'
+        exclude group: 'org.jetbrains.kotlin'
+    }
+
+    testCompile('org.junit.jupiter:junit-jupiter-api:{jupiter}')
+
+
+    // spek requires kotlin-reflect, can be omitted if already in the classpath
+    testRuntimeOnly "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+}
+----
+
+__________________________________________________________________________________________________________________________________
+For Spek you may also need additional Intellij or Android Studio
+https://plugins.jetbrains.com/plugin/10915-spek-framework[plugin]
+__________________________________________________________________________________________________________________________________
+
+
+== Mockito
+
+https://site.mockito.org
+
+
+**Add to project**
+
+[source,groovy,subs="attributes+"]
+----
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+
+dependencies {
+    testCompile "org.mockito:mockito-core:{mockito}"
+    
+    testCompile group: 'junit', name: 'junit', version: '{junit}'
+}
+----
+
+
+== Mockito-Kotlin
+
+https://github.com/nhaarman/mockito-kotlin
+
+
+**Add to project**
+
+[source,groovy,subs="attributes+"]
+----
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+
+dependencies {
+    testCompile "org.mockito:mockito-core:{mockito}"
+    testCompile "com.nhaarman.mockitokotlin2:mockito-kotlin:{mockito_kotlin}"
+    
+    testCompile group: 'junit', name: 'junit', version: '{junit}'
+}
+----
+
+== Mockk
+
+https://github.com/mockk/mockk
+
+**Add to project**
+
+[source,groovy,subs="attributes+"]
+----
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '{junit}'
+    testImplementation "io.mockk:mockk:{mockk}"
+}
+----
+
+== Strikt
+
+https://strikt.io
+
+**Add to project**
+
+[source,groovy,subs="attributes+"]
+----
+dependencies {
+    testImplementation("io.strikt:strikt-core:{strikt}")
+}
+----

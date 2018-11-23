@@ -16,7 +16,7 @@ dependencies {
 
 }
 
-tasks.withType<Test>().configureEach {
+tasks.withType<Test> {
     useJUnitPlatform()
     testLogging {
         events = setOf(PASSED, SKIPPED, FAILED)

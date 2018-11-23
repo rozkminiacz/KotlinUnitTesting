@@ -7,6 +7,20 @@ import kotlin.String
  *   `$ ./gradlew syncLibs`
  * to update this file */
 object Libs {
+    const val mockito_kotlin: String =
+            "com.nhaarman.mockitokotlin2:mockito-kotlin:" + Versions.mockito_kotlin
+
+    /**
+     * [kotlintest-runner-junit5 website](http://www.github.com/kotlintest/kotlintest) */
+    const val kotlintest_runner_junit5: String =
+            "io.kotlintest:kotlintest-runner-junit5:" + Versions.kotlintest_runner_junit5
+
+    /**
+     * [mockk website](http://mockk.io) */
+    const val mockk: String = "io.mockk:mockk:" + Versions.mockk
+
+    const val strikt_core: String = "io.strikt:strikt-core:" + Versions.strikt_core
+
     const val jmfayard_github_io_gradle_kotlin_dsl_libs_gradle_plugin: String =
             "jmfayard.github.io.gradle-kotlin-dsl-libs:jmfayard.github.io.gradle-kotlin-dsl-libs.gradle.plugin:" + Versions.jmfayard_github_io_gradle_kotlin_dsl_libs_gradle_plugin
 
@@ -14,25 +28,8 @@ object Libs {
      * [junit website](http://junit.org) */
     const val junit: String = "junit:junit:" + Versions.junit
 
-    /**
-     * [junit-jupiter-api website](http://junit.org/junit5/) */
-    const val junit_jupiter_api: String =
-            "org.junit.jupiter:junit-jupiter-api:" + Versions.junit_jupiter_api
-
-    /**
-     * [junit-jupiter-engine website](http://junit.org/junit5/) */
-    const val junit_jupiter_engine: String =
-            "org.junit.jupiter:junit-jupiter-engine:" + Versions.junit_jupiter_engine
-
-    /**
-     * [junit-jupiter-params website](http://junit.org/junit5/) */
-    const val junit_jupiter_params: String =
-            "org.junit.jupiter:junit-jupiter-params:" + Versions.junit_jupiter_params
-
-    /**
-     * [kotlin-gradle-plugin website](https://kotlinlang.org/) */
-    const val kotlin_gradle_plugin: String =
-            "org.jetbrains.kotlin:kotlin-gradle-plugin:" + Versions.kotlin_gradle_plugin
+    const val org_gradle_kotlin_kotlin_dsl_gradle_plugin: String =
+            "org.gradle.kotlin.kotlin-dsl:org.gradle.kotlin.kotlin-dsl.gradle.plugin:" + Versions.org_gradle_kotlin_kotlin_dsl_gradle_plugin
 
     /**
      * [kotlin-reflect website](https://kotlinlang.org/) */
@@ -55,34 +52,27 @@ object Libs {
             "org.jetbrains.kotlin:kotlin-stdlib-jdk8:" + Versions.kotlin_stdlib_jdk8
 
     /**
-     * [kotlintest-runner-junit5 website](http://www.github.com/kotlintest/kotlintest) */
-    const val kotlintest_runner_junit5: String =
-            "io.kotlintest:kotlintest-runner-junit5:" + Versions.kotlintest_runner_junit5
+     * [junit-jupiter-api website](http://junit.org/junit5/) */
+    const val junit_jupiter_api: String =
+            "org.junit.jupiter:junit-jupiter-api:" + Versions.org_junit_jupiter
+
+    /**
+     * [junit-jupiter-engine website](http://junit.org/junit5/) */
+    const val junit_jupiter_engine: String =
+            "org.junit.jupiter:junit-jupiter-engine:" + Versions.org_junit_jupiter
+
+    /**
+     * [junit-jupiter-params website](http://junit.org/junit5/) */
+    const val junit_jupiter_params: String =
+            "org.junit.jupiter:junit-jupiter-params:" + Versions.org_junit_jupiter
 
     /**
      * [mockito-core website](https://github.com/mockito/mockito) */
     const val mockito_core: String = "org.mockito:mockito-core:" + Versions.mockito_core
 
-    /**
-     * [mockito-kotlin website](https://github.com/nhaarman/mockito-kotlin) */
-    const val mockito_kotlin: String =
-            "com.nhaarman.mockitokotlin2:mockito-kotlin:" + Versions.mockito_kotlin
+    const val spek_dsl_jvm: String =
+            "org.spekframework.spek2:spek-dsl-jvm:" + Versions.org_spekframework_spek2
 
-    /**
-     * [mockk website](http://mockk.io) */
-    const val mockk: String = "io.mockk:mockk:" + Versions.mockk
-
-    const val org_gradle_kotlin_kotlin_dsl_gradle_plugin: String =
-            "org.gradle.kotlin.kotlin-dsl:org.gradle.kotlin.kotlin-dsl.gradle.plugin:" + Versions.org_gradle_kotlin_kotlin_dsl_gradle_plugin
-
-    /**
-     * [spek-dsl-jvm website](https://spekframework.github.io/spek) */
-    const val spek_dsl_jvm: String = "org.spekframework.spek2:spek-dsl-jvm:" + Versions.spek_dsl_jvm
-
-    /**
-     * [spek-runner-junit5 website](https://spekframework.github.io/spek) */
     const val spek_runner_junit5: String =
-            "org.spekframework.spek2:spek-runner-junit5:" + Versions.spek_runner_junit5
-
-    const val strikt_core: String = "io.strikt:strikt-core:" + Versions.strikt_core
+            "org.spekframework.spek2:spek-runner-junit5:" + Versions.org_spekframework_spek2
 }
