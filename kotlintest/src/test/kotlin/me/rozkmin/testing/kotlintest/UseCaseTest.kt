@@ -12,7 +12,7 @@ class UseCaseTest : WordSpec({
             val actual = useCase.execute()
             val expected = ""
 
-            expected shouldBe actual
+            actual shouldBe expected
         }
     }
 })
